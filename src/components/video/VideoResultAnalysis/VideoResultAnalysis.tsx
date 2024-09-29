@@ -12,7 +12,6 @@ import {
   StyledVideoResultAnalisys,
 } from './VideoResultAnalysis.styles';
 import {
-  Box,
   Button,
   Paper,
   Table,
@@ -56,18 +55,6 @@ export const VideoResultAnalisys = ({ video }: VideoResultAnalisysI) => {
       <StyledVideoAndBrief>
         <ReactPlayer ref={refPlayer} url={video.url} controls />
         <StyledBrief>
-          <StyledRowBox>
-            <Typography>
-              <strong>{'Emocje (twarz)'}</strong>
-            </Typography>
-            {videoResults?.ferResults.map(({ emotion, timestamp }) => (
-              <Box sx={{ display: 'flex', flexDirection: 'column-reverse' }}>
-                <Typography>{emotion}</Typography>
-                <Typography>{convertToMinutes(timestamp)}</Typography>
-              </Box>
-            ))}
-          </StyledRowBox>
-          <StyledMiniDivider />
           <StyledColumnBox>
             <Button variant="contained" onClick={handleOpenTranscript(true)}>
               Otwórz transkrypcję
@@ -79,16 +66,17 @@ export const VideoResultAnalisys = ({ video }: VideoResultAnalisysI) => {
           <StyledMiniDivider />
           <StyledRowBox>
             <Typography>
-              <strong>{'Grupa docelowa wypowiedzi:'}</strong>
+              <strong>{'Grupa docelowa:'}</strong>
             </Typography>
             <Typography>{videoResults?.targetGroup}</Typography>
           </StyledRowBox>
           <StyledRowBox>
             <Typography>
-              <strong>{'Zabarwienie emocjonalne wypowiedzi:'}</strong>
+              <strong>{'Zabarwienie emocjonalne:'}</strong>
             </Typography>
             <Typography>{videoResults?.sentiment}</Typography>
           </StyledRowBox>
+          <StyledMiniDivider />
           <StyledRowBox>
             <TableContainer component={Paper}>
               <Table>
@@ -124,7 +112,27 @@ export const VideoResultAnalisys = ({ video }: VideoResultAnalisysI) => {
           </StyledRowBox>
         </StyledBrief>
       </StyledVideoAndBrief>
+      <StyledDivider />
+      <Typography variant="h6">
+        Wybierz - klikając - moment na poniższych osiach czasu, aby przewinąć
+        wideo
+      </Typography>
+      <Typography sx={{ opacity: 0.7 }}>
+        Wybierz moment emocji twarzy
+      </Typography>
+      <StyledResultTimelineList>
+        {videoResults?.ferResults.map(({ timestamp, emotion }) => (
+          <StyledTimelineListItem onClick={handlePlaySection(timestamp)}>
+            <Typography>{convertToMinutes(timestamp)}</Typography>
+            <StyledDivider />
+            <Typography>{emotion}</Typography>
+          </StyledTimelineListItem>
+        ))}
+      </StyledResultTimelineList>
       <StyledMiniDivider />
+      <Typography sx={{ opacity: 0.7 }}>
+        Wybierz moment błędów wypowiedzi
+      </Typography>
       <StyledResultTimelineList>
         {video.videoResults.errors.map(({ timestamp, name, details }) => (
           <StyledTimelineListItem onClick={handlePlaySection(timestamp)}>

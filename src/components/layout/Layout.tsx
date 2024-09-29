@@ -1,5 +1,10 @@
-import { Box, Typography } from '@mui/material';
-import { StyledFooter, StyledHeader, StyledLayout } from './Layout.styles';
+import { Typography } from '@mui/material';
+import {
+  StyledFooter,
+  StyledHeader,
+  StyledLayout,
+  StyledMain,
+} from './Layout.styles';
 import { ParticledBackgroundNodes } from '../ui/ParticledBackground/ParticledBackground';
 
 interface LayoutI {
@@ -13,8 +18,9 @@ export const Layout = ({ children }: LayoutI) => {
         <Typography fontFamily="Arial" variant="h4">
           <i>PrzeMowa</i>
         </Typography>
+        <Typography variant="h6">{'=>'} analiza mówców</Typography>
       </StyledHeader>
-      <Box component="main">{children}</Box>
+      <StyledMain>{children}</StyledMain>
       <StyledFooter>-</StyledFooter>
       <ParticledBackgroundNodes />
     </StyledLayout>

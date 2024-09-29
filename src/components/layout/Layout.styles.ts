@@ -11,7 +11,15 @@ export const StyledLayout = styled(Box)`
 export const StyledHeader = styled(AppBar)`
   position: relative;
   padding: ${({ theme }) => theme.spacing(2)};
-  opacity: 0.7;
+  opacity: 0.55;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+`;
+
+export const StyledMain = styled('main')`
+  padding: ${({ theme }) => theme.spacing(4)};
+  padding-top: ${({ theme }) => theme.spacing(2)};
 `;
 
 export const StyledFooter = styled('footer')`

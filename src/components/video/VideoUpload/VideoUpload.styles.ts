@@ -29,6 +29,10 @@ export const StyledVideoUploadForm = styled('form')`
     p {
       ${styledCssAbsoluteCentered};
     }
+
+    span {
+      color: white !important;
+    }
   }
 
   button {
@@ -37,13 +41,13 @@ export const StyledVideoUploadForm = styled('form')`
 
   @keyframes pulseShadow {
     0% {
-      box-shadow: inset rgba(66, 165, 245, 0.7) -2px 1px 10px 3px;
+      box-shadow: inset rgba(66, 165, 245, 0.7) 0px 0px 0px 1px;
     }
     50% {
-      box-shadow: inset rgba(66, 165, 245, 0.7) -2px 1px 20px 5px;
+      box-shadow: inset rgba(66, 165, 245, 0.7) -2px 1px 10px 1px;
     }
     100% {
-      box-shadow: inset rgba(66, 165, 245, 0.7) -2px 1px 10px 3px;
+      box-shadow: inset rgba(66, 165, 245, 0.7) 0px 0px 0px 1px;
     }
   }
 `;

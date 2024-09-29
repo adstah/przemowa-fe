@@ -1,5 +1,6 @@
 import { Box, Button, Dialog, DialogContent, Typography } from '@mui/material';
 import { VideoResults } from '../VideoTool/Video.types';
+import { convertToMinutes } from '../VideoResultAnalysis/VideoResultAnalisys.utils';
 
 interface TranscriptDialogI {
   transcript: VideoResults['transcript'] | undefined;
@@ -22,7 +23,7 @@ export const TranscriptDialog = ({
       <DialogContent sx={{ display: 'flex', flexDirection: 'column' }}>
         {transcript?.map(({ timestamp, text }) => (
           <Box>
-            <Typography>{timestamp}</Typography>
+            <Typography>{convertToMinutes(timestamp)}</Typography>
             <Typography>{text}</Typography>
           </Box>
         ))}

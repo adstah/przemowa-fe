@@ -1,4 +1,4 @@
-import { AccordionSummary, Box, styled } from '@mui/material';
+import { Accordion, AccordionSummary, Box, styled } from '@mui/material';
 
 export const StyledVideosResults = styled(Box)`
   height: 100%;
@@ -16,8 +16,16 @@ export const StyledSummary = styled(Box)`
   margin-bottom: ${({ theme }) => theme.spacing(1)};
   color: ${({ theme }) => theme.palette.grey[200]};
   padding: ${({ theme }) => theme.spacing(2)};
+  margin-top: 0;
   border-radius: ${({ theme }) => theme.spacing(1)};
-  gap: ${({ theme }) => theme.spacing(2)};
+  gap: ${({ theme }) => theme.spacing(3)};
+`;
+
+export const StyledAccordion = styled(Accordion)`
+  transition: 0.25s ease-in-out;
+  :hover {
+    background: #2f2f2f;
+  }
 `;
 
 export const StyledAccordionSummary = styled(AccordionSummary)`
@@ -25,7 +33,7 @@ export const StyledAccordionSummary = styled(AccordionSummary)`
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: ${({ theme }) => theme.spacing(3)};
   }
 `;
 
@@ -37,4 +45,9 @@ export const StyledLeftSummary = styled(Box)`
 export const StyledRightSummary = styled(Box)`
   display: flex;
   flex-direction: column;
+`;
+
+export const StyledNextSection = styled(Box)`
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
 `;
