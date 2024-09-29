@@ -1,0 +1,162 @@
+{
+    "videosResults": [
+        {
+            "fileName": "HY_2024_film_01.mp4",
+            "ferResults": [
+                {
+                    "emotion": "wesoły",
+                    "timestamp": 5
+                },
+                {
+                    "emotion": "smutny",
+                    "timestamp": 15
+                }
+            ],
+            "transcript": [
+                {
+                    "timestamp": 0,
+                    "text": "Dzień dobry wszystkim"
+                },
+                {
+                    "timestamp": 10,
+                    "text": "Dziś będziemy rozmawiać o technologii"
+                }
+            ],
+            "targetGroup": "młodzież",
+            "sentiment": "pozytywny",
+            "questions": [
+                "Jakie są najnowsze trendy?",
+                "Czym jest sztuczna inteligencja?"
+            ],
+            "readability": {
+                "fleschScore": 75.4,
+                "fleschGrade": "łatwe",
+                "gunningFogScore": 7.2,
+                "gunningFogGrade": "średnie"
+            },
+            "errors": [
+                {
+                    "timestamp": 20,
+                    "name": "pauza",
+                    "details": "Długa pauza w mówieniu"
+                },
+                {
+                    "timestamp": 45,
+                    "name": "przekleństwo"
+                }
+            ]
+        },
+        {
+            "fileName": "HY_2024_film_02.mp4",
+            "ferResults": [
+                {
+                    "emotion": "wesoły",
+                    "timestamp": 5
+                },
+                {
+                    "emotion": "smutny",
+                    "timestamp": 15
+                }
+            ],
+            "transcript": [
+                {
+                    "timestamp": 0,
+                    "text": "Dzień dobry wszystkim"
+                },
+                {
+                    "timestamp": 10,
+                    "text": "Dziś będziemy rozmawiać o technologii"
+                }
+            ],
+            "targetGroup": "młodzież",
+            "sentiment": "pozytywny",
+            "questions": [
+                "Jakie są najnowsze trendy?",
+                "Czym jest sztuczna inteligencja?"
+            ],
+            "readability": {
+                "fleschScore": 75.4,
+                "fleschGrade": "łatwe",
+                "gunningFogScore": 7.2,
+                "gunningFogGrade": "średnie"
+            },
+            "errors": [
+                {
+                    "timestamp": 20,
+                    "name": "pauza",
+                    "details": "Długa pauza w mówieniu"
+                },
+                {
+                    "timestamp": 45,
+                    "name": "przekleństwo"
+                },
+                {
+                    "timestamp": 50,
+                    "name": "pauza",
+                    "details": "Długa pauza w mówieniu"
+                },
+                {
+                    "timestamp": 65,
+                    "name": "przekleństwo"
+                },
+                {
+                    "timestamp": 70,
+                    "name": "pauza",
+                    "details": "Długa pauza w mówieniu"
+                },
+                {
+                    "timestamp": 85,
+                    "name": "przekleństwo"
+                },
+                {
+                    "timestamp": 120,
+                    "name": "pauza",
+                    "details": "Długa pauza w mówieniu"
+                },
+                {
+                    "timestamp": 145,
+                    "name": "przekleństwo"
+                },
+                {
+                    "timestamp": 150,
+                    "name": "pauza",
+                    "details": "Długa pauza w mówieniu"
+                },
+                {
+                    "timestamp": 165,
+                    "name": "przekleństwo"
+                },
+                {
+                    "timestamp": 170,
+                    "name": "pauza",
+                    "details": "Długa pauza w mówieniu"
+                },
+                {
+                    "timestamp": 185,
+                    "name": "przekleństwo"
+                }
+            ]
+        }
+    ],
+    "summary": {
+        "overall": {
+            "totalFiles": 1,
+            "totalErrors": 2,
+            "wordsPerMinute": 130
+        },
+        "statistics": [
+            {
+                "name": "przekleństwo",
+                "quantity": 5
+            },
+            {
+                "name": "pisk",
+                "quantity": 2
+            },
+            {
+                "name": "dyszenie",
+                "quantity": 8
+            }
+        ]
+    }
+}
