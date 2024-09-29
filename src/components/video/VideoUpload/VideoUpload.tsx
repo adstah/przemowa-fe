@@ -115,7 +115,7 @@ export const VideoUpload = ({
               ) : (
                 <p>
                   Przeciągnij i upuść, lub kliknij tutaj i wybierz pliki do
-                  analizy przemówienia
+                  analizy przemówienia (max:5)
                 </p>
               )}
             </div>
