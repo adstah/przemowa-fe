@@ -16,6 +16,8 @@ import Dropzone from 'react-dropzone';
 import { ResultsDTO, SummaryResult, Video } from '../VideoTool/Video.types';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { processResponse } from './VideoUpload.utils';
+import { ENDPOINTS } from '../../../xhr/endpoints';
+import { POST_FILE } from '../../../xhr/methods';
 
 interface VideoUploadI {
   setVideos: Dispatch<SetStateAction<Video[]>>;
@@ -59,16 +61,14 @@ export const VideoUpload = ({
     setIsLoading(true);
     const processedFiles = formVideos.map(({ file }) => file);
     try {
-      // const response = await POST_FILE(
-      //   ENDPOINTS.VIDEO_ANALISYS,
-      //   processedFiles
-      // );
-      const response = { ok: true };
-      console.log(processedFiles);
-
-      //
-      const mockedResponse = await fetch('/public/mock.json');
-      const data = (await mockedResponse.json()) as ResultsDTO;
+      const response = await POST_FILE(
+        ENDPOINTS.VIDEO_ANALISYS,
+        processedFiles
+      );
+      // const response = { ok: true };
+      // console.log(processedFiles);
+      // const mockedResponse = await fetch('/public/mock.json');
+      const data = (await response.json()) as ResultsDTO;
       //
 
       const { videos, summary } = processResponse(data, formVideos);

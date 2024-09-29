@@ -19,5 +19,5 @@ export const styledCssAbsoluteCentered = css`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -75%);
+  transform: translate(-50%, -65%);
 `;

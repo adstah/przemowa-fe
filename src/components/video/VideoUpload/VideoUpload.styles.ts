@@ -19,6 +19,7 @@ export const StyledVideoUploadForm = styled('form')`
     margin-top: ${({ theme }) => theme.spacing(3)};
     background: ${({ theme }) => theme.palette.grey[900]};
     border-radius: ${({ theme }) => theme.spacing(2)};
+    opacity: 0.9;
     box-shadow: inset ${({ theme }) => theme.palette.primary.dark} -2px 1px 20px
       3px;
 
@@ -28,6 +29,7 @@ export const StyledVideoUploadForm = styled('form')`
 
     p {
       ${styledCssAbsoluteCentered};
+      opacity: 0.85;
     }
 
     span {
